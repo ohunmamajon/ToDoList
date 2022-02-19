@@ -44,12 +44,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fH-Nr-Bkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GRK-4F-28Y" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FM5-fw-jH4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" id="FM5-fw-jH4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.70376539680000005" green="1" blue="0.34089331229999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.32496896751624244" green="0.91839859160509973" blue="0.7617045564939664" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" systemColor="systemGreenColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -63,6 +63,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
