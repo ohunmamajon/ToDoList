@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="qkF-R0-MPo" id="cIQ-kr-WRR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDo" id="GEs-nb-bMd"/>
+                    <navigationItem key="navigationItem" title="ToDo" id="GEs-nb-bMd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qFw-cR-Syh">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="qkF-R0-MPo" id="GnL-sU-U6x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPs-PH-cjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +48,6 @@
         <!--Navigation Controller-->
         <scene sceneID="bCz-bG-aNb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6fH-Nr-Bkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GRK-4F-28Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" id="FM5-fw-jH4">
@@ -56,6 +62,7 @@
                         <segue destination="qkF-R0-MPo" kind="relationship" relationship="rootViewController" id="pj2-pA-Jf5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fH-Nr-Bkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-300" y="-22.098214285714285"/>
         </scene>
