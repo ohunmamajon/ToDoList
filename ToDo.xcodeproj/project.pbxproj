@@ -16,6 +16,7 @@
 		CC01A46727C1791000051E3E /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01A46627C1791000051E3E /* ToDoTests.swift */; };
 		CC01A47127C1791000051E3E /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01A47027C1791000051E3E /* ToDoUITests.swift */; };
 		CC01A47327C1791000051E3E /* ToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC01A47227C1791000051E3E /* ToDoUITestsLaunchTests.swift */; };
+		CCF71DE527D3FC5F0018BD13 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF71DE427D3FC5F0018BD13 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CC01A46C27C1791000051E3E /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC01A47027C1791000051E3E /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
 		CC01A47227C1791000051E3E /* ToDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CCF71DE427D3FC5F0018BD13 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 			children = (
 				CC01A44F27C1790F00051E3E /* AppDelegate.swift */,
 				CC01A45127C1790F00051E3E /* SceneDelegate.swift */,
-				CC01A45327C1790F00051E3E /* ViewController.swift */,
-				CC01A45527C1790F00051E3E /* Main.storyboard */,
+				CCF71DE627D3FC740018BD13 /* Data Model */,
+				CCF71DE727D3FCC50018BD13 /* Views */,
+				CCF71DE827D3FCE00018BD13 /* Controller */,
 				CC01A45827C1791000051E3E /* Assets.xcassets */,
 				CC01A45A27C1791000051E3E /* LaunchScreen.storyboard */,
 				CC01A45D27C1791000051E3E /* Info.plist */,
@@ -125,6 +128,30 @@
 				CC01A47227C1791000051E3E /* ToDoUITestsLaunchTests.swift */,
 			);
 			path = ToDoUITests;
+			sourceTree = "<group>";
+		};
+		CCF71DE627D3FC740018BD13 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCF71DE427D3FC5F0018BD13 /* Item.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		CCF71DE727D3FCC50018BD13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC01A45527C1790F00051E3E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CCF71DE827D3FCE00018BD13 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC01A45327C1790F00051E3E /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +287,7 @@
 			files = (
 				CC01A45427C1790F00051E3E /* ViewController.swift in Sources */,
 				CC01A45027C1790F00051E3E /* AppDelegate.swift in Sources */,
+				CCF71DE527D3FC5F0018BD13 /* Item.swift in Sources */,
 				CC01A45227C1790F00051E3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
