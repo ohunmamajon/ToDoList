@@ -7,15 +7,15 @@
 
 import UIKit
 import CoreData
-class ViewController: UITableViewController {
+class ViewController: UITableViewController{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
    var itemArray = [Item]()
         override func viewDidLoad() {
             super.viewDidLoad()
+           
             print ( FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-
             loadItems()
         }
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,11 +26,6 @@ class ViewController: UITableViewController {
             let item = itemArray[indexPath.row]
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done ? .checkmark : .none
-//            if item.done == true {
-//                cell.accessoryType = .checkmark
-//            } else {
-//                cell.accessoryType = .none
-//            }
             return cell
         }
   
@@ -72,13 +67,24 @@ class ViewController: UITableViewController {
            print ("Error saving context, \(error)")
         }
     }
-    func loadItems () {
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
+    func loadItems (with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+        
         do {
            itemArray = try context.fetch(request)
         } catch {
            print ("Error fetching context, \(error)")
         }
     }
+    
 }
 
+//MARK: - Search Bar methods
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        loadItems(with: request)
+        tableView.reloadData()
+    }
+}
