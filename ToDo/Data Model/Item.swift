@@ -1,12 +1,16 @@
 //
-//  Data Model.swift
+//  Item.swift
 //  ToDo
 //
-//  Created by Okhunjon Mamajonov on 2022/03/06.
+//  Created by Okhunjon Mamajonov on 2022/06/17.
 //
 
 import Foundation
-class Item: Encodable, Decodable {
-    var title : String = ""
-    var done: Bool = false
+import RealmSwift
+ 
+class Item: Object {
+   @objc dynamic var title: String = ""
+    @objc dynamic var done : Bool = false
+    var parentCategory = LinkingObjects(fromType: Category.self, property: "items")
+    
 }
