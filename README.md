@@ -1,6 +1,6 @@
 # ToDoList
-A to do list app
- #  Demonstrated:
-# Core Data with Tables
-# Persistent Data & CRUD
-# Realm
+A basic to-do-list app
+ #  Demonstrated
+# CRUD in Realm
+# Cocoapod SwipeCellKit
+# UISearch Bar
