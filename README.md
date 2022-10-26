@@ -4,3 +4,4 @@ A basic to-do-list app
  - CRUD in Realm
  - Cocoapod SwipeCellKit
  - UISearch Bar
+ - Chameleon Framework - random color, gradient colors
